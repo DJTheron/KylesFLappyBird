@@ -2,6 +2,10 @@ import pygame
 import random
 import os
 
+highscore_file = os.path.join(os.path.expanduser("~"), "highscore.txt")
+def save_highscore(score):
+    with open(highscore_file, 'w') as file:
+        file.write(score)
 # Initialize Pygame
 pygame.init()
 gravity = 250
@@ -111,3 +115,4 @@ while running:
     pygame.display.flip()
 
     clock.tick(60) 
+
