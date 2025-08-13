@@ -1,5 +1,6 @@
 import pygame
 import random
+import os
 
 # Initialize Pygame
 pygame.init()
@@ -108,4 +109,5 @@ while running:
 
     # Update display and tick clock
     pygame.display.flip()
+
     clock.tick(60) 
