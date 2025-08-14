@@ -3,9 +3,9 @@ import random
 import os
 
 highscore_file = os.path.join(os.path.expanduser("~"), "highscore.txt")
-def save_highscore(score):
+def save_highscore(score1):
     with open(highscore_file, 'w') as file:
-        file.write(score)
+        file.write(score1)
 # Initialize Pygame
 pygame.init()
 gravity = 250
@@ -101,6 +101,7 @@ while running:
         if not pipe["passed"] and x + PIPE_WIDTH < 100:
             pipe["passed"] = True
             score += 1
+            save_highscore(score)
 
         # Keep pipe if still on screen
         if x + PIPE_WIDTH > 0:
@@ -115,4 +116,5 @@ while running:
     pygame.display.flip()
 
     clock.tick(60) 
+
 
