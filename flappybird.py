@@ -5,7 +5,8 @@ import os
 highscore_file = os.path.join(os.path.expanduser("~"), "highscore.txt")
 def save_highscore(score1):
     with open(highscore_file, 'w') as file:
-        file.write(score1)
+        file.write(str(score1))
+
 # Initialize Pygame
 pygame.init()
 gravity = 250
@@ -116,5 +117,6 @@ while running:
     pygame.display.flip()
 
     clock.tick(60) 
+
 
 
