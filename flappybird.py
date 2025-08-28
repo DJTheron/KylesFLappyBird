@@ -23,7 +23,7 @@ pygame.display.set_caption("Flappy Bird")
 pipe_img = pygame.image.load("pipe.png")
 pipe_img = pygame.transform.scale(pipe_img, (100, 350))
 flipped_pipe = pygame.transform.flip(pipe_img, False, True)
-
+  
 bird_img = pygame.image.load("flappy.png")
 bird_img = pygame.transform.scale(bird_img, (40, 40))
 
